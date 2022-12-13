@@ -25,3 +25,5 @@ docker push <REGISTRY_REPO_ADDRESS>:<TAG>
 # Resources
 * https://medium.com/executeautomation/how-to-run-net-core-app-with-specific-launch-profile-in-docker-container-2905b350b420
 * https://learn.microsoft.com/tr-tr/aspnet/core/host-and-deploy/docker/building-net-docker-images
+* https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+* https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
