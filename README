@@ -12,7 +12,15 @@ In order to run the image:
 ```
 docker run -it --rm -p 80:80  --name test testo
 ```
-Also in order to modify the environments we can enter environments such as `-e ASPNETCORE_ENVIRONMENT=Development` and `-e ASPNETCORE_URLS=http://localhost:5001/`.
+Also in order to modify the launch configuration we can enter environments such as `-e ASPNETCORE_ENVIRONMENT=Development` and `-e ASPNETCORE_URLS=http://localhost:5001/`.
+
+# Uploading the Image to Docker Hub
+
+After getting an account from Docker Hub, we should login to their registry with `docker login`. Afterwards:
+```
+docker tag <IMAGE_NAME>:<TAG> <REGISTRY_REPO_ADDRESS>:<TAG>
+docker push <REGISTRY_REPO_ADDRESS>:<TAG>
+```
 
 # Resources
 * https://medium.com/executeautomation/how-to-run-net-core-app-with-specific-launch-profile-in-docker-container-2905b350b420
