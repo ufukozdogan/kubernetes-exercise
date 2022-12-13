@@ -1,0 +1,19 @@
+# Building the Docker Image and Running the Docker Container
+
+## Build
+We can quickly build the Docker image with:
+```
+docker build <IMAGE_NAME> <DOCKERFILE_LOCATION>
+```
+We can also add `--progress plain` to see the outputs or `--no-cache` to build with no cache. 
+
+## Run
+In order to run the image:
+```
+docker run -it --rm -p 80:80  --name test testo
+```
+Also in order to modify the environments we can enter environments such as `-e ASPNETCORE_ENVIRONMENT=Development` and `-e ASPNETCORE_URLS=http://localhost:5001/`.
+
+# Resources
+* https://medium.com/executeautomation/how-to-run-net-core-app-with-specific-launch-profile-in-docker-container-2905b350b420
+* https://learn.microsoft.com/tr-tr/aspnet/core/host-and-deploy/docker/building-net-docker-images
