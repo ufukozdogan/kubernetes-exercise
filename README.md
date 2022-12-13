@@ -1,3 +1,7 @@
+# Kubernetes-Exercise
+
+This is a project that has some .NET Core app dockerization and a couple of Kubernetes configs.
+
 # Docker
 
 ## Building the Image
@@ -12,7 +16,7 @@ To test the image before we send it to the registry:
 ```
 docker run -it --rm -p <HOST_PORT>:<CONTAINER_PORT>  --name <CONTAINER_NAME> <IMAGE_NAME>
 ```
-By default CONTAINER_PORT is *80* and the environment is *Production*. In order to modify the launch configurations, we can enable environments such as `-e ASPNETCORE_ENVIRONMENT=Development` and `-e ASPNETCORE_URLS=http://localhost:5001/`. For more information on environments you can check out [this](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host?view=aspnetcore-6.0#host-configuration-values) page.
+By default CONTAINER_PORT is *80* and the environment is *Production*. In order to modify the launch configurations, we can enable environments such as `-e ASPNETCORE_ENVIRONMENT=Development` and `-e ASPNETCORE_URLS=http://localhost:5001/`. For more information on environments, you can check out [this](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host?view=aspnetcore-6.0#host-configuration-values) page.
 
 ## Uploading the Image to Docker Hub
 After getting an account from Docker Hub, we should login to their registry with `docker login`. Afterwards:
